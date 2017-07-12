@@ -10,9 +10,5 @@
 
     <mvc:annotation-driven/>
 
-    <mvc:interceptors>
-        <bean id="CorsInterceptor" class="com.hexagon.clinic.web.CorsInterceptor"/>
-    </mvc:interceptors>
-
     <mvc:view-controller path="/" view-name="index"/>
 </beans>
