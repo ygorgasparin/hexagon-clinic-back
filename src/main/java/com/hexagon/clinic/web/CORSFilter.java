@@ -23,7 +23,7 @@ public class CORSFilter implements Filter {
         r.addHeader("Access-Control-Allow-Origin", "*");
         r.addHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
         r.addHeader("Access-Control-Max-Age", "3600");
-        r.addHeader("Access-Control-Allow-Headers", "x-requested-with");
+        r.addHeader("Access-Control-Allow-Headers", "*");
 
         chain.doFilter(request, response);
     }
