@@ -10,16 +10,9 @@
 
     <mvc:annotation-driven/>
 
-    <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources -->
-    <!--<mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>-->
+    <mvc:interceptors>
+        <bean id="CorsInterceptor" class="com.hexagon.clinic.web.CorsInterceptor"/>
+    </mvc:interceptors>
 
-    <!-- Allows for mapping the DispatcherServlet to "/" by forwarding static resource 
-    requests to the container's default Servlet -->
-    <!--<mvc:default-servlet-handler/>-->
-
-    <!-- Selects a static view for rendering without the need for an explicit controller -->
     <mvc:view-controller path="/" view-name="index"/>
-    <!--<mvc:view-controller path="/uncaughtException"/>-->
-    <!--<mvc:view-controller path="/resourceNotFound"/>-->
-
 </beans>
